@@ -5,7 +5,7 @@ HOST: http://107.170.33.116:3000/browser-2/snomed
 The IHTSDO Browser API is a the backend for the *IHTSDO Browser Terminology Services*.
 
 # Group Concepts
-Notes related resources of the **Concepts API**
+Concepts of the SNOMED CT terminology.
 
 ## Concept [/concepts/{sctid}]
 A single Concept object with all its details
@@ -13,45 +13,2037 @@ A single Concept object with all its details
 + Parameters
     + sctid (required, number, `138875005`) ... SNOMED CT Identifier (`sctid`) of the Concept. Has example value.
 
-
-# Group Notes
-Notes related resources of the **Notes API**
-
-## Notes Collection [/notes]
-### List all Notes [GET]
-+ Response 200 (application/json)
-
-        [{
-          "id": 1, "title": "Jogging in park"
-        }, {
-          "id": 2, "title": "Pick-up posters from post-office"
-        }]
-
-### Create a Note [POST]
-+ Request (application/json)
-
-        { "title": "Buy cheese and bread for breakfast." }
-
-+ Response 201 (application/json)
-
-        { "id": 3, "title": "Buy cheese and bread for breakfast." }
-
-## Note [/notes/{id}]
-A single Note object with all its details
-
-+ Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
-
-### Retrieve a Note [GET]
+### Retrieve a Concept [GET]
 + Response 200 (application/json)
 
     + Header
 
-            X-My-Header: The Value
+            X-My-Header: Header
 
     + Body
 
-            { "id": 2, "title": "Pick-up posters from post-office" }
+            {
+              "_id": "52fd32b491d8f194e1162c2b",
+              "memberships": [
+                {
+                  "type": "SIMPLEMAP",
+                  "referencedComponentId": 138875005,
+                  "refset": {
+                    "conceptId": "900000000000497000",
+                    "defaultTerm": "CTV3 simple map reference set (foundation metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "otherValue": "XU05D",
+                  "uuid": "56ed2946-830f-52b8-b4d2-f7fdc946a3bf",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000207008"
+                },
+                {
+                  "type": "SIMPLEMAP",
+                  "referencedComponentId": 138875005,
+                  "refset": {
+                    "conceptId": "900000000000498005",
+                    "defaultTerm": "SNOMED RT identifier simple map (foundation metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "otherValue": "R-00000",
+                  "uuid": "2087db40-1bea-5efd-8d1c-d2ef0d4c6e11",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000207008"
+                }
+              ],
+              "descriptions": [
+                {
+                  "descriptionId": 1237157018,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "SNOMED CT July 2002 Release: 20020731 [R]",
+                  "length": 41,
+                  "ics": {
+                    "conceptId": "900000000000017005",
+                    "defaultTerm": "Entire term case sensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20090131",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 1495664019,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "SNOMED CT January 2003 Release: 20030131 [R]",
+                  "length": 44,
+                  "ics": {
+                    "conceptId": "900000000000017005",
+                    "defaultTerm": "Entire term case sensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20090131",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 1784738019,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "SNOMED CT July 2003 Release: 20030731 [R]",
+                  "length": 41,
+                  "ics": {
+                    "conceptId": "900000000000017005",
+                    "defaultTerm": "Entire term case sensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20040131",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2162201015,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "SNOMED CT January 2004 Release: 20040131 [R]",
+                  "length": 44,
+                  "ics": {
+                    "conceptId": "900000000000017005",
+                    "defaultTerm": "Entire term case sensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20040731",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2162202010,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "©2002 - 2004 College of American Pathologists",
+                  "length": 45,
+                  "ics": {
+                    "conceptId": "900000000000020002",
+                    "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20050731",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 220306011,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "SNOMED CT First Release: 20020131 [R]",
+                  "length": 37,
+                  "ics": {
+                    "conceptId": "900000000000017005",
+                    "defaultTerm": "Entire term case sensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20090131",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 220307019,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "©2002 College of American Pathologists",
+                  "length": 38,
+                  "ics": {
+                    "conceptId": "900000000000020002",
+                    "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20040131",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 220308012,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health and is a Crown copyright.",
+                  "length": 220,
+                  "ics": {
+                    "conceptId": "900000000000017005",
+                    "defaultTerm": "Entire term case sensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "langMemberships": [
+                    {
+                      "descriptionId": 220308012,
+                      "refset": {
+                        "conceptId": "900000000000508004",
+                        "defaultTerm": "Great Britain English language reference set (foundation metadata concept)",
+                        "definitionStatus": "Primitive",
+                        "active": true,
+                        "effectiveTime": "20020131",
+                        "module": "900000000000012004"
+                      },
+                      "acceptability": {
+                        "conceptId": "900000000000549004",
+                        "defaultTerm": "Acceptable (foundation metadata concept)",
+                        "definitionStatus": "Primitive",
+                        "active": true,
+                        "effectiveTime": "20020131",
+                        "module": "900000000000012004"
+                      },
+                      "uuid": "50d2cb94-b30b-587c-9014-93b3d2a1a462",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000207008"
+                    },
+                    {
+                      "descriptionId": 220308012,
+                      "refset": {
+                        "conceptId": "900000000000509007",
+                        "defaultTerm": "United States of America English language reference set (foundation metadata concept)",
+                        "definitionStatus": "Primitive",
+                        "active": true,
+                        "effectiveTime": "20020131",
+                        "module": "900000000000012004"
+                      },
+                      "acceptability": {
+                        "conceptId": "900000000000549004",
+                        "defaultTerm": "Acceptable (foundation metadata concept)",
+                        "definitionStatus": "Primitive",
+                        "active": true,
+                        "effectiveTime": "20020131",
+                        "module": "900000000000012004"
+                      },
+                      "uuid": "f04f4a1e-c097-52a3-8c3d-f794fdb32a1a",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000207008"
+                    }
+                  ],
+                  "active": true,
+                  "effectiveTime": "20030731",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 220309016,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "SNOMED CT Concept",
+                  "length": 17,
+                  "ics": {
+                    "conceptId": "900000000000017005",
+                    "defaultTerm": "Entire term case sensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "langMemberships": [
+                    {
+                      "descriptionId": 220309016,
+                      "refset": {
+                        "conceptId": "900000000000509007",
+                        "defaultTerm": "United States of America English language reference set (foundation metadata concept)",
+                        "definitionStatus": "Primitive",
+                        "active": true,
+                        "effectiveTime": "20020131",
+                        "module": "900000000000012004"
+                      },
+                      "acceptability": {
+                        "conceptId": "900000000000548007",
+                        "defaultTerm": "Preferred (foundation metadata concept)",
+                        "definitionStatus": "Primitive",
+                        "active": true,
+                        "effectiveTime": "20020131",
+                        "module": "900000000000012004"
+                      },
+                      "uuid": "147cd051-3da6-56c9-ba82-f719e2ee3ed9",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000207008"
+                    },
+                    {
+                      "descriptionId": 220309016,
+                      "refset": {
+                        "conceptId": "900000000000508004",
+                        "defaultTerm": "Great Britain English language reference set (foundation metadata concept)",
+                        "definitionStatus": "Primitive",
+                        "active": true,
+                        "effectiveTime": "20020131",
+                        "module": "900000000000012004"
+                      },
+                      "acceptability": {
+                        "conceptId": "900000000000548007",
+                        "defaultTerm": "Preferred (foundation metadata concept)",
+                        "definitionStatus": "Primitive",
+                        "active": true,
+                        "effectiveTime": "20020131",
+                        "module": "900000000000012004"
+                      },
+                      "uuid": "75302efc-dfad-5ca6-a7db-1650d8ddc69a",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000207008"
+                    }
+                  ],
+                  "active": true,
+                  "effectiveTime": "20030731",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2475493019,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "SNOMED CT July 2004 Release: 20040731 [R]",
+                  "length": 41,
+                  "ics": {
+                    "conceptId": "900000000000017005",
+                    "defaultTerm": "Entire term case sensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20050131",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2535804014,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "SNOMED CT January 2005 Release: 20050131 [R]",
+                  "length": 44,
+                  "ics": {
+                    "conceptId": "900000000000017005",
+                    "defaultTerm": "Entire term case sensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20050731",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2550712018,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "©2002 - 2005 College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of the College of American Pathologists, all rights reserved.",
+                  "length": 155,
+                  "ics": {
+                    "conceptId": "900000000000020002",
+                    "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20060131",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2550713011,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "SNOMED Clinical Terms version: 20050731 [R] (July 2005 Release)",
+                  "length": 63,
+                  "ics": {
+                    "conceptId": "900000000000017005",
+                    "defaultTerm": "Entire term case sensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20060131",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2579105014,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "©2002 - 2006 College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of the College of American Pathologists, all rights reserved.",
+                  "length": 155,
+                  "ics": {
+                    "conceptId": "900000000000020002",
+                    "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20070131",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2579106010,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "SNOMED Clinical Terms version: 20060131 [R] (January 2006 Release)",
+                  "length": 66,
+                  "ics": {
+                    "conceptId": "900000000000017005",
+                    "defaultTerm": "Entire term case sensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20060731",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2619058019,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "SNOMED Clinical Terms version: 20060731 [R] (July 2006 Release)",
+                  "length": 63,
+                  "ics": {
+                    "conceptId": "900000000000017005",
+                    "defaultTerm": "Entire term case sensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20070131",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2646354017,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "©2002 - 2007 College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of the College of American Pathologists, all rights reserved",
+                  "length": 154,
+                  "ics": {
+                    "conceptId": "900000000000020002",
+                    "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20070731",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2646355016,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "SNOMED Clinical Terms version: 20070131 [R] (January 2007 Release)",
+                  "length": 66,
+                  "ics": {
+                    "conceptId": "900000000000017005",
+                    "defaultTerm": "Entire term case sensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20070731",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2665701017,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "SNOMED Clinical Terms version: 20070731 [R] (July 2007 Release)",
+                  "length": 63,
+                  "ics": {
+                    "conceptId": "900000000000017005",
+                    "defaultTerm": "Entire term case sensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20080131",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2665702012,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "© 2002-2007 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO.",
+                  "length": 252,
+                  "ics": {
+                    "conceptId": "900000000000020002",
+                    "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20080131",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2693208015,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "© 2002-2008 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO.",
+                  "length": 252,
+                  "ics": {
+                    "conceptId": "900000000000020002",
+                    "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20090131",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2695742013,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "SNOMED Clinical Terms version: 20080131 [R] (January 2008 Release)",
+                  "length": 66,
+                  "ics": {
+                    "conceptId": "900000000000017005",
+                    "defaultTerm": "Entire term case sensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20080731",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2773836014,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "SNOMED Clinical Terms version: 20080731 [R] (July 2008 Release)",
+                  "length": 63,
+                  "ics": {
+                    "conceptId": "900000000000017005",
+                    "defaultTerm": "Entire term case sensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20090131",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2791258018,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "SNOMED Clinical Terms version: 20090131 [R] (January 2009 Release)",
+                  "length": 66,
+                  "ics": {
+                    "conceptId": "900000000000017005",
+                    "defaultTerm": "Entire term case sensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20090731",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2794659017,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "© 2002-2009 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO.",
+                  "length": 252,
+                  "ics": {
+                    "conceptId": "900000000000020002",
+                    "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20100131",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2821170019,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "SNOMED Clinical Terms version: 20090731 [R] (July 2009 Release)",
+                  "length": 63,
+                  "ics": {
+                    "conceptId": "900000000000017005",
+                    "defaultTerm": "Entire term case sensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20100131",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2841555019,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "SNOMED Clinical Terms version: 20100131 [R] (January 2010 Release)",
+                  "length": 66,
+                  "ics": {
+                    "conceptId": "900000000000017005",
+                    "defaultTerm": "Entire term case sensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20100731",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2841556018,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "© 2002-2010 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO.",
+                  "length": 252,
+                  "ics": {
+                    "conceptId": "900000000000020002",
+                    "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20110131",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2871246012,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "SNOMED Clinical Terms version: 20100731 [R] (July 2010 Release)",
+                  "length": 63,
+                  "ics": {
+                    "conceptId": "900000000000017005",
+                    "defaultTerm": "Entire term case sensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20110131",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2883678010,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "SNOMED Clinical Terms version: 20110131 [R] (January 2011 Release)",
+                  "length": 66,
+                  "ics": {
+                    "conceptId": "900000000000017005",
+                    "defaultTerm": "Entire term case sensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20110731",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2883679019,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "© 2002-2011 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO.",
+                  "length": 252,
+                  "ics": {
+                    "conceptId": "900000000000020002",
+                    "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20120131",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2901529017,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "SNOMED Clinical Terms version: 20110731 [R] (July 2011 Release)",
+                  "length": 63,
+                  "ics": {
+                    "conceptId": "900000000000017005",
+                    "defaultTerm": "Entire term case sensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20120131",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2913224013,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "© 2002-2012 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO.",
+                  "length": 252,
+                  "ics": {
+                    "conceptId": "900000000000020002",
+                    "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20130131",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2913225014,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "SNOMED Clinical Terms version: 20120131 [R] (January 2012 Release)",
+                  "length": 66,
+                  "ics": {
+                    "conceptId": "900000000000017005",
+                    "defaultTerm": "Entire term case sensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20120731",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2921180019,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "SNOMED Clinical Terms version: 20120731 [R] (July 2012 Release)",
+                  "length": 63,
+                  "ics": {
+                    "conceptId": "900000000000017005",
+                    "defaultTerm": "Entire term case sensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20130131",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2957185017,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "SNOMED Clinical Terms version: 20130131 [R] (January 2013 Release)",
+                  "length": 66,
+                  "ics": {
+                    "conceptId": "900000000000017005",
+                    "defaultTerm": "Entire term case sensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20130731",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2957222010,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "© 2002-2013 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO.",
+                  "length": 252,
+                  "ics": {
+                    "conceptId": "900000000000020002",
+                    "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20140131",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2959952016,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "SNOMED Clinical Terms version: 20130731 [R] (July 2013 Release)",
+                  "length": 63,
+                  "ics": {
+                    "conceptId": "900000000000017005",
+                    "defaultTerm": "Entire term case sensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "active": false,
+                  "effectiveTime": "20140131",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 517382016,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000003001",
+                    "defaultTerm": "Fully specified name (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "SNOMED CT Concept (SNOMED RT+CTV3)",
+                  "length": 34,
+                  "ics": {
+                    "conceptId": "900000000000017005",
+                    "defaultTerm": "Entire term case sensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "langMemberships": [
+                    {
+                      "descriptionId": 517382016,
+                      "refset": {
+                        "conceptId": "900000000000509007",
+                        "defaultTerm": "United States of America English language reference set (foundation metadata concept)",
+                        "definitionStatus": "Primitive",
+                        "active": true,
+                        "effectiveTime": "20020131",
+                        "module": "900000000000012004"
+                      },
+                      "acceptability": {
+                        "conceptId": "900000000000548007",
+                        "defaultTerm": "Preferred (foundation metadata concept)",
+                        "definitionStatus": "Primitive",
+                        "active": true,
+                        "effectiveTime": "20020131",
+                        "module": "900000000000012004"
+                      },
+                      "uuid": "433bd887-654d-516e-99fd-fc3e612da994",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000207008"
+                    },
+                    {
+                      "descriptionId": 517382016,
+                      "refset": {
+                        "conceptId": "900000000000508004",
+                        "defaultTerm": "Great Britain English language reference set (foundation metadata concept)",
+                        "definitionStatus": "Primitive",
+                        "active": true,
+                        "effectiveTime": "20020131",
+                        "module": "900000000000012004"
+                      },
+                      "acceptability": {
+                        "conceptId": "900000000000548007",
+                        "defaultTerm": "Preferred (foundation metadata concept)",
+                        "definitionStatus": "Primitive",
+                        "active": true,
+                        "effectiveTime": "20020131",
+                        "module": "900000000000012004"
+                      },
+                      "uuid": "e606c375-501d-5db6-821f-f03d8a12ad1c",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000207008"
+                    }
+                  ],
+                  "active": true,
+                  "effectiveTime": "20030731",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2989035012,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "© 2002-2014 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO.",
+                  "length": 252,
+                  "ics": {
+                    "conceptId": "900000000000020002",
+                    "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "langMemberships": [
+                    {
+                      "descriptionId": 2989035012,
+                      "refset": {
+                        "conceptId": "900000000000509007",
+                        "defaultTerm": "United States of America English language reference set (foundation metadata concept)",
+                        "definitionStatus": "Primitive",
+                        "active": true,
+                        "effectiveTime": "20020131",
+                        "module": "900000000000012004"
+                      },
+                      "acceptability": {
+                        "conceptId": "900000000000549004",
+                        "defaultTerm": "Acceptable (foundation metadata concept)",
+                        "definitionStatus": "Primitive",
+                        "active": true,
+                        "effectiveTime": "20020131",
+                        "module": "900000000000012004"
+                      },
+                      "uuid": "5e0e3e74-99c1-5b1e-a838-69ec1a0116c1",
+                      "active": true,
+                      "effectiveTime": "20140131",
+                      "module": "900000000000207008"
+                    },
+                    {
+                      "descriptionId": 2989035012,
+                      "refset": {
+                        "conceptId": "900000000000508004",
+                        "defaultTerm": "Great Britain English language reference set (foundation metadata concept)",
+                        "definitionStatus": "Primitive",
+                        "active": true,
+                        "effectiveTime": "20020131",
+                        "module": "900000000000012004"
+                      },
+                      "acceptability": {
+                        "conceptId": "900000000000549004",
+                        "defaultTerm": "Acceptable (foundation metadata concept)",
+                        "definitionStatus": "Primitive",
+                        "active": true,
+                        "effectiveTime": "20020131",
+                        "module": "900000000000012004"
+                      },
+                      "uuid": "63c8b678-2e46-51f6-8f17-d147a5d38c42",
+                      "active": true,
+                      "effectiveTime": "20140131",
+                      "module": "900000000000207008"
+                    }
+                  ],
+                  "active": true,
+                  "effectiveTime": "20140131",
+                  "module": "900000000000207008"
+                },
+                {
+                  "descriptionId": 2989111016,
+                  "conceptId": 138875005,
+                  "type": {
+                    "conceptId": "900000000000013009",
+                    "defaultTerm": "Synonym (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "term": "SNOMED Clinical Terms version: 20140131 [R] (January 2014 Release)",
+                  "length": 66,
+                  "ics": {
+                    "conceptId": "900000000000017005",
+                    "defaultTerm": "Entire term case sensitive (core metadata concept)",
+                    "definitionStatus": "Primitive",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000012004"
+                  },
+                  "langMemberships": [
+                    {
+                      "descriptionId": 2989111016,
+                      "refset": {
+                        "conceptId": "900000000000509007",
+                        "defaultTerm": "United States of America English language reference set (foundation metadata concept)",
+                        "definitionStatus": "Primitive",
+                        "active": true,
+                        "effectiveTime": "20020131",
+                        "module": "900000000000012004"
+                      },
+                      "acceptability": {
+                        "conceptId": "900000000000549004",
+                        "defaultTerm": "Acceptable (foundation metadata concept)",
+                        "definitionStatus": "Primitive",
+                        "active": true,
+                        "effectiveTime": "20020131",
+                        "module": "900000000000012004"
+                      },
+                      "uuid": "5a3d7b7d-49e4-531e-89f3-47648ffc65df",
+                      "active": true,
+                      "effectiveTime": "20140131",
+                      "module": "900000000000207008"
+                    },
+                    {
+                      "descriptionId": 2989111016,
+                      "refset": {
+                        "conceptId": "900000000000508004",
+                        "defaultTerm": "Great Britain English language reference set (foundation metadata concept)",
+                        "definitionStatus": "Primitive",
+                        "active": true,
+                        "effectiveTime": "20020131",
+                        "module": "900000000000012004"
+                      },
+                      "acceptability": {
+                        "conceptId": "900000000000549004",
+                        "defaultTerm": "Acceptable (foundation metadata concept)",
+                        "definitionStatus": "Primitive",
+                        "active": true,
+                        "effectiveTime": "20020131",
+                        "module": "900000000000012004"
+                      },
+                      "uuid": "624da15e-8cd5-5171-9dbb-4a77477f0ae4",
+                      "active": true,
+                      "effectiveTime": "20140131",
+                      "module": "900000000000207008"
+                    }
+                  ],
+                  "active": true,
+                  "effectiveTime": "20140131",
+                  "module": "900000000000207008"
+                }
+              ],
+              "conceptId": 138875005,
+              "defaultTerm": "SNOMED CT Concept (SNOMED RT+CTV3)",
+              "definitionStatus": "Primitive",
+              "active": true,
+              "effectiveTime": "20020131",
+              "module": "900000000000207008"
+            }
 
-### Remove a Note [DELETE]
-+ Response 204
+# Group Children
+Children or Subtypes are concepts that are directly linked with an is-a relationship to the parent concept.
+
+## Children Collection [/concepts/{sctid}/children?form={form}]
+A collection of all children of a concept, for the specified form (stated form or inferred form).
+
++ Parameters
+    + sctid (required, number, `138875005`) ... SNOMED CT Identifier (`sctid`) of the Parent Concept. Has example value.
+    + form (optional, string, `stated`) ... Form used to select the children, the form matches the characteristic type of the is-a relationships selected for creating the collection. The default value is "inferred". Possible values are "stated" or "inferred" Has example value.
+
+### Retrieve Children [GET]
++ Response 200 (application/json)
+
+    + Header
+
+            X-My-Header: Header
+
+    + Body
+
+            [
+              {
+                "_id": "52fd339291d8f194e11adf37",
+                "conceptId": 410607006,
+                "defaultTerm": "Organism (organism)",
+                "active": true
+              },
+              {
+                "_id": "52fd338491d8f194e11a9696",
+                "conceptId": 123037004,
+                "defaultTerm": "Body structure (body structure)",
+                "active": true
+              },
+              {
+                "_id": "52fd338491d8f194e11a953d",
+                "conceptId": 123038009,
+                "defaultTerm": "Specimen (specimen)",
+                "active": true
+              },
+              {
+                "_id": "52fd338091d8f194e11a81a7",
+                "conceptId": 404684003,
+                "defaultTerm": "Clinical finding (finding)",
+                "active": true
+              },
+              {
+                "_id": "52fd337d91d8f194e11a6f33",
+                "conceptId": 272379006,
+                "defaultTerm": "Event (event)",
+                "active": true
+              },
+              {
+                "_id": "52fd337391d8f194e11a3f8d",
+                "conceptId": 363787002,
+                "defaultTerm": "Observable entity (observable entity)",
+                "active": true
+              },
+              {
+                "_id": "52fd336b91d8f194e11a14dc",
+                "conceptId": 71388002,
+                "defaultTerm": "Procedure (procedure)",
+                "active": true
+              },
+              {
+                "_id": "52fd336991d8f194e11a0916",
+                "conceptId": 243796009,
+                "defaultTerm": "Situation with explicit context (situation)",
+                "active": true
+              },
+              {
+                "_id": "52fd335191d8f194e1198e87",
+                "conceptId": 78621006,
+                "defaultTerm": "Physical force (physical force)",
+                "active": true
+              },
+              {
+                "_id": "52fd334f91d8f194e1198132",
+                "conceptId": 260787004,
+                "defaultTerm": "Physical object (physical object)",
+                "active": true
+              },
+              {
+                "_id": "52fd32c091d8f194e1166948",
+                "conceptId": 254291000,
+                "defaultTerm": "Staging and scales (staging scale)",
+                "active": true
+              },
+              {
+                "_id": "52fd32b591d8f194e1162ef2",
+                "conceptId": 105590001,
+                "defaultTerm": "Substance (substance)",
+                "active": true
+              },
+              {
+                "_id": "52fd334091d8f194e11929fa",
+                "conceptId": "900000000000441003",
+                "defaultTerm": "SNOMED CT Model Component (metadata)",
+                "active": true
+              },
+              {
+                "_id": "52fd333991d8f194e11900b1",
+                "conceptId": 308916002,
+                "defaultTerm": "Environment or geographical location (environment / location)",
+                "active": true
+              },
+              {
+                "_id": "52fd32a591d8f194e115d71f",
+                "conceptId": 362981000,
+                "defaultTerm": "Qualifier value (qualifier value)",
+                "active": true
+              },
+              {
+                "_id": "52fd329d91d8f194e115ab1d",
+                "conceptId": 370115009,
+                "defaultTerm": "Special concept (special concept)",
+                "active": true
+              },
+              {
+                "_id": "52fd329791d8f194e11586c6",
+                "conceptId": 373873005,
+                "defaultTerm": "Pharmaceutical / biologic product (product)",
+                "active": true
+              },
+              {
+                "_id": "52fd330191d8f194e117bb15",
+                "conceptId": 48176007,
+                "defaultTerm": "Social context (social concept)",
+                "active": true
+              },
+              {
+                "_id": "52fd32d291d8f194e116c57b",
+                "conceptId": 419891008,
+                "defaultTerm": "Record artifact (record artifact)",
+                "active": true
+              }
+            ]
+
+# Group Descriptions
+Descriptions of SNOMED CT Concepts.
+
+## Descriptions Collection [/concepts/{sctid}/descriptions]
+A collection of all children of a concept, for the specified form (stated form or inferred form).
+
++ Parameters
+    + sctid (required, number, `138875005`) ... SNOMED CT Identifier (`sctid`) of the Concept. Has example value.
+
+### Retrieve Descriptions of a Concept [GET]
++ Response 200 (application/json)
+
+    + Header
+
+            X-My-Header: Header
+
+    + Body
+
+        [
+          {
+            "descriptionId": 198229013,
+            "conceptId": 50043002,
+            "type": {
+              "conceptId": "900000000000013009",
+              "defaultTerm": "Synonym (core metadata concept)",
+              "definitionStatus": "Primitive",
+              "active": true,
+              "effectiveTime": "20020131",
+              "module": "900000000000012004"
+            },
+            "term": "Respiratory disease",
+            "length": 19,
+            "ics": {
+              "conceptId": "900000000000020002",
+              "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+              "definitionStatus": "Primitive",
+              "active": true,
+              "effectiveTime": "20020131",
+              "module": "900000000000012004"
+            },
+            "langMemberships": [
+              {
+                "descriptionId": 198229013,
+                "refset": {
+                  "conceptId": "900000000000508004",
+                  "defaultTerm": "Great Britain English language reference set (foundation metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "acceptability": {
+                  "conceptId": "900000000000549004",
+                  "defaultTerm": "Acceptable (foundation metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "uuid": "a1718b14-7bef-5e17-94fa-6b5e497f3094",
+                "active": true,
+                "effectiveTime": "20020131",
+                "module": "900000000000207008"
+              },
+              {
+                "descriptionId": 198229013,
+                "refset": {
+                  "conceptId": "900000000000509007",
+                  "defaultTerm": "United States of America English language reference set (foundation metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "acceptability": {
+                  "conceptId": "900000000000549004",
+                  "defaultTerm": "Acceptable (foundation metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "uuid": "a29d2ebe-3598-54b0-9ae3-09aa6eb5216b",
+                "active": true,
+                "effectiveTime": "20020131",
+                "module": "900000000000207008"
+              }
+            ],
+            "active": true,
+            "effectiveTime": "20020131",
+            "module": "900000000000207008"
+          },
+          {
+            "descriptionId": 2468834018,
+            "conceptId": 50043002,
+            "type": {
+              "conceptId": "900000000000003001",
+              "defaultTerm": "Fully specified name (core metadata concept)",
+              "definitionStatus": "Primitive",
+              "active": true,
+              "effectiveTime": "20020131",
+              "module": "900000000000012004"
+            },
+            "term": "Disorder of respiratory system (disorder)",
+            "length": 41,
+            "ics": {
+              "conceptId": "900000000000020002",
+              "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+              "definitionStatus": "Primitive",
+              "active": true,
+              "effectiveTime": "20020131",
+              "module": "900000000000012004"
+            },
+            "langMemberships": [
+              {
+                "descriptionId": 2468834018,
+                "refset": {
+                  "conceptId": "900000000000508004",
+                  "defaultTerm": "Great Britain English language reference set (foundation metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "acceptability": {
+                  "conceptId": "900000000000548007",
+                  "defaultTerm": "Preferred (foundation metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "uuid": "000372cb-9f92-54d8-81c1-be464f4f2d93",
+                "active": true,
+                "effectiveTime": "20040731",
+                "module": "900000000000207008"
+              },
+              {
+                "descriptionId": 2468834018,
+                "refset": {
+                  "conceptId": "900000000000509007",
+                  "defaultTerm": "United States of America English language reference set (foundation metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "acceptability": {
+                  "conceptId": "900000000000548007",
+                  "defaultTerm": "Preferred (foundation metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "uuid": "c69468d5-bf1c-5eee-a446-a754f519b735",
+                "active": true,
+                "effectiveTime": "20040731",
+                "module": "900000000000207008"
+              }
+            ],
+            "active": true,
+            "effectiveTime": "20040731",
+            "module": "900000000000207008"
+          },
+          {
+            "descriptionId": 2474886015,
+            "conceptId": 50043002,
+            "type": {
+              "conceptId": "900000000000013009",
+              "defaultTerm": "Synonym (core metadata concept)",
+              "definitionStatus": "Primitive",
+              "active": true,
+              "effectiveTime": "20020131",
+              "module": "900000000000012004"
+            },
+            "term": "Disorder of respiratory system",
+            "length": 30,
+            "ics": {
+              "conceptId": "900000000000020002",
+              "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+              "definitionStatus": "Primitive",
+              "active": true,
+              "effectiveTime": "20020131",
+              "module": "900000000000012004"
+            },
+            "langMemberships": [
+              {
+                "descriptionId": 2474886015,
+                "refset": {
+                  "conceptId": "900000000000509007",
+                  "defaultTerm": "United States of America English language reference set (foundation metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "acceptability": {
+                  "conceptId": "900000000000548007",
+                  "defaultTerm": "Preferred (foundation metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "uuid": "6b6b7701-140f-527d-8a46-71bb732cd3ec",
+                "active": true,
+                "effectiveTime": "20040731",
+                "module": "900000000000207008"
+              },
+              {
+                "descriptionId": 2474886015,
+                "refset": {
+                  "conceptId": "900000000000508004",
+                  "defaultTerm": "Great Britain English language reference set (foundation metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "acceptability": {
+                  "conceptId": "900000000000548007",
+                  "defaultTerm": "Preferred (foundation metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "uuid": "ededc6da-4d9b-5a6d-82c4-9729a0a32dac",
+                "active": true,
+                "effectiveTime": "20040731",
+                "module": "900000000000207008"
+              }
+            ],
+            "active": true,
+            "effectiveTime": "20040731",
+            "module": "900000000000207008"
+          },
+          {
+            "descriptionId": 495571011,
+            "conceptId": 50043002,
+            "type": {
+              "conceptId": "900000000000013009",
+              "defaultTerm": "Synonym (core metadata concept)",
+              "definitionStatus": "Primitive",
+              "active": true,
+              "effectiveTime": "20020131",
+              "module": "900000000000012004"
+            },
+            "term": "Respiratory system disease",
+            "length": 26,
+            "ics": {
+              "conceptId": "900000000000020002",
+              "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+              "definitionStatus": "Primitive",
+              "active": true,
+              "effectiveTime": "20020131",
+              "module": "900000000000012004"
+            },
+            "langMemberships": [
+              {
+                "descriptionId": 495571011,
+                "refset": {
+                  "conceptId": "900000000000508004",
+                  "defaultTerm": "Great Britain English language reference set (foundation metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "acceptability": {
+                  "conceptId": "900000000000549004",
+                  "defaultTerm": "Acceptable (foundation metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "uuid": "44f67edb-7adc-543f-9724-2f5d1fbcc4fa",
+                "active": true,
+                "effectiveTime": "20020131",
+                "module": "900000000000207008"
+              },
+              {
+                "descriptionId": 495571011,
+                "refset": {
+                  "conceptId": "900000000000509007",
+                  "defaultTerm": "United States of America English language reference set (foundation metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "acceptability": {
+                  "conceptId": "900000000000549004",
+                  "defaultTerm": "Acceptable (foundation metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "uuid": "e8dcd507-9acc-5a59-873e-d0b1da156bda",
+                "active": true,
+                "effectiveTime": "20020131",
+                "module": "900000000000207008"
+              }
+            ],
+            "active": true,
+            "effectiveTime": "20020131",
+            "module": "900000000000207008"
+          },
+          {
+            "descriptionId": 787788013,
+            "conceptId": 50043002,
+            "type": {
+              "conceptId": "900000000000003001",
+              "defaultTerm": "Fully specified name (core metadata concept)",
+              "definitionStatus": "Primitive",
+              "active": true,
+              "effectiveTime": "20020131",
+              "module": "900000000000012004"
+            },
+            "term": "Disease of respiratory system (disorder)",
+            "length": 40,
+            "ics": {
+              "conceptId": "900000000000020002",
+              "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+              "definitionStatus": "Primitive",
+              "active": true,
+              "effectiveTime": "20020131",
+              "module": "900000000000012004"
+            },
+            "active": false,
+            "effectiveTime": "20040731",
+            "module": "900000000000207008"
+          },
+          {
+            "descriptionId": 83355011,
+            "conceptId": 50043002,
+            "type": {
+              "conceptId": "900000000000013009",
+              "defaultTerm": "Synonym (core metadata concept)",
+              "definitionStatus": "Primitive",
+              "active": true,
+              "effectiveTime": "20020131",
+              "module": "900000000000012004"
+            },
+            "term": "Disease of respiratory system",
+            "length": 29,
+            "ics": {
+              "conceptId": "900000000000020002",
+              "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+              "definitionStatus": "Primitive",
+              "active": true,
+              "effectiveTime": "20020131",
+              "module": "900000000000012004"
+            },
+            "active": false,
+            "effectiveTime": "20040731",
+            "module": "900000000000207008"
+          },
+          {
+            "descriptionId": 83356012,
+            "conceptId": 50043002,
+            "type": {
+              "conceptId": "900000000000013009",
+              "defaultTerm": "Synonym (core metadata concept)",
+              "definitionStatus": "Primitive",
+              "active": true,
+              "effectiveTime": "20020131",
+              "module": "900000000000012004"
+            },
+            "term": "Disease of respiratory system, NOS",
+            "length": 34,
+            "ics": {
+              "conceptId": "900000000000020002",
+              "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+              "definitionStatus": "Primitive",
+              "active": true,
+              "effectiveTime": "20020131",
+              "module": "900000000000012004"
+            },
+            "active": false,
+            "effectiveTime": "20020131",
+            "module": "900000000000207008"
+          },
+          {
+            "descriptionId": 83357015,
+            "conceptId": 50043002,
+            "type": {
+              "conceptId": "900000000000013009",
+              "defaultTerm": "Synonym (core metadata concept)",
+              "definitionStatus": "Primitive",
+              "active": true,
+              "effectiveTime": "20020131",
+              "module": "900000000000012004"
+            },
+            "term": "Respiratory disorder, NOS",
+            "length": 25,
+            "ics": {
+              "conceptId": "900000000000020002",
+              "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+              "definitionStatus": "Primitive",
+              "active": true,
+              "effectiveTime": "20020131",
+              "module": "900000000000012004"
+            },
+            "active": false,
+            "effectiveTime": "20020131",
+            "module": "900000000000207008"
+          },
+          {
+            "descriptionId": 83358013,
+            "conceptId": 50043002,
+            "type": {
+              "conceptId": "900000000000013009",
+              "defaultTerm": "Synonym (core metadata concept)",
+              "definitionStatus": "Primitive",
+              "active": true,
+              "effectiveTime": "20020131",
+              "module": "900000000000012004"
+            },
+            "term": "Respiratory disorder",
+            "length": 20,
+            "ics": {
+              "conceptId": "900000000000020002",
+              "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+              "definitionStatus": "Primitive",
+              "active": true,
+              "effectiveTime": "20020131",
+              "module": "900000000000012004"
+            },
+            "langMemberships": [
+              {
+                "descriptionId": 83358013,
+                "refset": {
+                  "conceptId": "900000000000509007",
+                  "defaultTerm": "United States of America English language reference set (foundation metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "acceptability": {
+                  "conceptId": "900000000000549004",
+                  "defaultTerm": "Acceptable (foundation metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "uuid": "702d14dc-df5c-519b-96a3-40e27092e0f2",
+                "active": true,
+                "effectiveTime": "20020131",
+                "module": "900000000000207008"
+              },
+              {
+                "descriptionId": 83358013,
+                "refset": {
+                  "conceptId": "900000000000508004",
+                  "defaultTerm": "Great Britain English language reference set (foundation metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "acceptability": {
+                  "conceptId": "900000000000549004",
+                  "defaultTerm": "Acceptable (foundation metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "uuid": "b27ec132-697c-5d94-b727-37ec4058222f",
+                "active": true,
+                "effectiveTime": "20020131",
+                "module": "900000000000207008"
+              }
+            ],
+            "active": true,
+            "effectiveTime": "20020131",
+            "module": "900000000000207008"
+          }
+        ]
+        
+## Description [/descriptions/{sctid}]
+A single Description object with all its details
+
++ Parameters
+    + sctid (required, number, `198229013`) ... SNOMED CT Identifier (`sctid`) of the Description. Has example value.
+
+### Retrieve a Concept [GET]
++ Response 200 (application/json)
+
+    + Header
+
+            X-My-Header: Header
+
+    + Body
+
+        [
+          {
+            "descriptionId": 198229013,
+            "conceptId": 50043002,
+            "type": {
+              "conceptId": "900000000000013009",
+              "defaultTerm": "Synonym (core metadata concept)",
+              "definitionStatus": "Primitive",
+              "active": true,
+              "effectiveTime": "20020131",
+              "module": "900000000000012004"
+            },
+            "term": "Respiratory disease",
+            "length": 19,
+            "ics": {
+              "conceptId": "900000000000020002",
+              "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+              "definitionStatus": "Primitive",
+              "active": true,
+              "effectiveTime": "20020131",
+              "module": "900000000000012004"
+            },
+            "langMemberships": [
+              {
+                "descriptionId": 198229013,
+                "refset": {
+                  "conceptId": "900000000000508004",
+                  "defaultTerm": "Great Britain English language reference set (foundation metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "acceptability": {
+                  "conceptId": "900000000000549004",
+                  "defaultTerm": "Acceptable (foundation metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "uuid": "a1718b14-7bef-5e17-94fa-6b5e497f3094",
+                "active": true,
+                "effectiveTime": "20020131",
+                "module": "900000000000207008"
+              },
+              {
+                "descriptionId": 198229013,
+                "refset": {
+                  "conceptId": "900000000000509007",
+                  "defaultTerm": "United States of America English language reference set (foundation metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "acceptability": {
+                  "conceptId": "900000000000549004",
+                  "defaultTerm": "Acceptable (foundation metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "uuid": "a29d2ebe-3598-54b0-9ae3-09aa6eb5216b",
+                "active": true,
+                "effectiveTime": "20020131",
+                "module": "900000000000207008"
+              }
+            ],
+            "active": true,
+            "effectiveTime": "20020131",
+            "module": "900000000000207008"
+          }
+        ]
