@@ -1339,7 +1339,7 @@ A single Concept object with all its details
 Children or Subtypes are concepts that are directly linked with an is-a relationship to the parent concept.
 
 ## Children Collection [/concepts/{sctid}/children?form={form}]
-A collection of all children of a concept, for the specified form (stated form or inferred form).
+A collection of all children of a concept, for the specified form (stated form or inferred form). Search returns a summary of each child concept in order to minimize transfer loads.
 
 + Parameters
     + sctid (required, number, `138875005`) ... SNOMED CT Identifier (`sctid`) of the Parent Concept. Has example value.
@@ -1474,489 +1474,6 @@ A collection of all children of a concept, for the specified form (stated form o
 # Group Descriptions
 Descriptions of SNOMED CT Concepts.
 
-## Descriptions Collection [/concepts/{sctid}/descriptions]
-A collection of all children of a concept, for the specified form (stated form or inferred form).
-
-+ Parameters
-    + sctid (required, number, `138875005`) ... SNOMED CT Identifier (`sctid`) of the Concept. Has example value.
-
-### Retrieve Descriptions of a Concept [GET]
-+ Response 200 (application/json)
-
-    + Header
-
-            X-My-Header: Header
-
-    + Body
-
-        [
-          {
-            "descriptionId": 198229013,
-            "conceptId": 50043002,
-            "type": {
-              "conceptId": "900000000000013009",
-              "defaultTerm": "Synonym (core metadata concept)",
-              "definitionStatus": "Primitive",
-              "active": true,
-              "effectiveTime": "20020131",
-              "module": "900000000000012004"
-            },
-            "term": "Respiratory disease",
-            "length": 19,
-            "ics": {
-              "conceptId": "900000000000020002",
-              "defaultTerm": "Only initial character case insensitive (core metadata concept)",
-              "definitionStatus": "Primitive",
-              "active": true,
-              "effectiveTime": "20020131",
-              "module": "900000000000012004"
-            },
-            "langMemberships": [
-              {
-                "descriptionId": 198229013,
-                "refset": {
-                  "conceptId": "900000000000508004",
-                  "defaultTerm": "Great Britain English language reference set (foundation metadata concept)",
-                  "definitionStatus": "Primitive",
-                  "active": true,
-                  "effectiveTime": "20020131",
-                  "module": "900000000000012004"
-                },
-                "acceptability": {
-                  "conceptId": "900000000000549004",
-                  "defaultTerm": "Acceptable (foundation metadata concept)",
-                  "definitionStatus": "Primitive",
-                  "active": true,
-                  "effectiveTime": "20020131",
-                  "module": "900000000000012004"
-                },
-                "uuid": "a1718b14-7bef-5e17-94fa-6b5e497f3094",
-                "active": true,
-                "effectiveTime": "20020131",
-                "module": "900000000000207008"
-              },
-              {
-                "descriptionId": 198229013,
-                "refset": {
-                  "conceptId": "900000000000509007",
-                  "defaultTerm": "United States of America English language reference set (foundation metadata concept)",
-                  "definitionStatus": "Primitive",
-                  "active": true,
-                  "effectiveTime": "20020131",
-                  "module": "900000000000012004"
-                },
-                "acceptability": {
-                  "conceptId": "900000000000549004",
-                  "defaultTerm": "Acceptable (foundation metadata concept)",
-                  "definitionStatus": "Primitive",
-                  "active": true,
-                  "effectiveTime": "20020131",
-                  "module": "900000000000012004"
-                },
-                "uuid": "a29d2ebe-3598-54b0-9ae3-09aa6eb5216b",
-                "active": true,
-                "effectiveTime": "20020131",
-                "module": "900000000000207008"
-              }
-            ],
-            "active": true,
-            "effectiveTime": "20020131",
-            "module": "900000000000207008"
-          },
-          {
-            "descriptionId": 2468834018,
-            "conceptId": 50043002,
-            "type": {
-              "conceptId": "900000000000003001",
-              "defaultTerm": "Fully specified name (core metadata concept)",
-              "definitionStatus": "Primitive",
-              "active": true,
-              "effectiveTime": "20020131",
-              "module": "900000000000012004"
-            },
-            "term": "Disorder of respiratory system (disorder)",
-            "length": 41,
-            "ics": {
-              "conceptId": "900000000000020002",
-              "defaultTerm": "Only initial character case insensitive (core metadata concept)",
-              "definitionStatus": "Primitive",
-              "active": true,
-              "effectiveTime": "20020131",
-              "module": "900000000000012004"
-            },
-            "langMemberships": [
-              {
-                "descriptionId": 2468834018,
-                "refset": {
-                  "conceptId": "900000000000508004",
-                  "defaultTerm": "Great Britain English language reference set (foundation metadata concept)",
-                  "definitionStatus": "Primitive",
-                  "active": true,
-                  "effectiveTime": "20020131",
-                  "module": "900000000000012004"
-                },
-                "acceptability": {
-                  "conceptId": "900000000000548007",
-                  "defaultTerm": "Preferred (foundation metadata concept)",
-                  "definitionStatus": "Primitive",
-                  "active": true,
-                  "effectiveTime": "20020131",
-                  "module": "900000000000012004"
-                },
-                "uuid": "000372cb-9f92-54d8-81c1-be464f4f2d93",
-                "active": true,
-                "effectiveTime": "20040731",
-                "module": "900000000000207008"
-              },
-              {
-                "descriptionId": 2468834018,
-                "refset": {
-                  "conceptId": "900000000000509007",
-                  "defaultTerm": "United States of America English language reference set (foundation metadata concept)",
-                  "definitionStatus": "Primitive",
-                  "active": true,
-                  "effectiveTime": "20020131",
-                  "module": "900000000000012004"
-                },
-                "acceptability": {
-                  "conceptId": "900000000000548007",
-                  "defaultTerm": "Preferred (foundation metadata concept)",
-                  "definitionStatus": "Primitive",
-                  "active": true,
-                  "effectiveTime": "20020131",
-                  "module": "900000000000012004"
-                },
-                "uuid": "c69468d5-bf1c-5eee-a446-a754f519b735",
-                "active": true,
-                "effectiveTime": "20040731",
-                "module": "900000000000207008"
-              }
-            ],
-            "active": true,
-            "effectiveTime": "20040731",
-            "module": "900000000000207008"
-          },
-          {
-            "descriptionId": 2474886015,
-            "conceptId": 50043002,
-            "type": {
-              "conceptId": "900000000000013009",
-              "defaultTerm": "Synonym (core metadata concept)",
-              "definitionStatus": "Primitive",
-              "active": true,
-              "effectiveTime": "20020131",
-              "module": "900000000000012004"
-            },
-            "term": "Disorder of respiratory system",
-            "length": 30,
-            "ics": {
-              "conceptId": "900000000000020002",
-              "defaultTerm": "Only initial character case insensitive (core metadata concept)",
-              "definitionStatus": "Primitive",
-              "active": true,
-              "effectiveTime": "20020131",
-              "module": "900000000000012004"
-            },
-            "langMemberships": [
-              {
-                "descriptionId": 2474886015,
-                "refset": {
-                  "conceptId": "900000000000509007",
-                  "defaultTerm": "United States of America English language reference set (foundation metadata concept)",
-                  "definitionStatus": "Primitive",
-                  "active": true,
-                  "effectiveTime": "20020131",
-                  "module": "900000000000012004"
-                },
-                "acceptability": {
-                  "conceptId": "900000000000548007",
-                  "defaultTerm": "Preferred (foundation metadata concept)",
-                  "definitionStatus": "Primitive",
-                  "active": true,
-                  "effectiveTime": "20020131",
-                  "module": "900000000000012004"
-                },
-                "uuid": "6b6b7701-140f-527d-8a46-71bb732cd3ec",
-                "active": true,
-                "effectiveTime": "20040731",
-                "module": "900000000000207008"
-              },
-              {
-                "descriptionId": 2474886015,
-                "refset": {
-                  "conceptId": "900000000000508004",
-                  "defaultTerm": "Great Britain English language reference set (foundation metadata concept)",
-                  "definitionStatus": "Primitive",
-                  "active": true,
-                  "effectiveTime": "20020131",
-                  "module": "900000000000012004"
-                },
-                "acceptability": {
-                  "conceptId": "900000000000548007",
-                  "defaultTerm": "Preferred (foundation metadata concept)",
-                  "definitionStatus": "Primitive",
-                  "active": true,
-                  "effectiveTime": "20020131",
-                  "module": "900000000000012004"
-                },
-                "uuid": "ededc6da-4d9b-5a6d-82c4-9729a0a32dac",
-                "active": true,
-                "effectiveTime": "20040731",
-                "module": "900000000000207008"
-              }
-            ],
-            "active": true,
-            "effectiveTime": "20040731",
-            "module": "900000000000207008"
-          },
-          {
-            "descriptionId": 495571011,
-            "conceptId": 50043002,
-            "type": {
-              "conceptId": "900000000000013009",
-              "defaultTerm": "Synonym (core metadata concept)",
-              "definitionStatus": "Primitive",
-              "active": true,
-              "effectiveTime": "20020131",
-              "module": "900000000000012004"
-            },
-            "term": "Respiratory system disease",
-            "length": 26,
-            "ics": {
-              "conceptId": "900000000000020002",
-              "defaultTerm": "Only initial character case insensitive (core metadata concept)",
-              "definitionStatus": "Primitive",
-              "active": true,
-              "effectiveTime": "20020131",
-              "module": "900000000000012004"
-            },
-            "langMemberships": [
-              {
-                "descriptionId": 495571011,
-                "refset": {
-                  "conceptId": "900000000000508004",
-                  "defaultTerm": "Great Britain English language reference set (foundation metadata concept)",
-                  "definitionStatus": "Primitive",
-                  "active": true,
-                  "effectiveTime": "20020131",
-                  "module": "900000000000012004"
-                },
-                "acceptability": {
-                  "conceptId": "900000000000549004",
-                  "defaultTerm": "Acceptable (foundation metadata concept)",
-                  "definitionStatus": "Primitive",
-                  "active": true,
-                  "effectiveTime": "20020131",
-                  "module": "900000000000012004"
-                },
-                "uuid": "44f67edb-7adc-543f-9724-2f5d1fbcc4fa",
-                "active": true,
-                "effectiveTime": "20020131",
-                "module": "900000000000207008"
-              },
-              {
-                "descriptionId": 495571011,
-                "refset": {
-                  "conceptId": "900000000000509007",
-                  "defaultTerm": "United States of America English language reference set (foundation metadata concept)",
-                  "definitionStatus": "Primitive",
-                  "active": true,
-                  "effectiveTime": "20020131",
-                  "module": "900000000000012004"
-                },
-                "acceptability": {
-                  "conceptId": "900000000000549004",
-                  "defaultTerm": "Acceptable (foundation metadata concept)",
-                  "definitionStatus": "Primitive",
-                  "active": true,
-                  "effectiveTime": "20020131",
-                  "module": "900000000000012004"
-                },
-                "uuid": "e8dcd507-9acc-5a59-873e-d0b1da156bda",
-                "active": true,
-                "effectiveTime": "20020131",
-                "module": "900000000000207008"
-              }
-            ],
-            "active": true,
-            "effectiveTime": "20020131",
-            "module": "900000000000207008"
-          },
-          {
-            "descriptionId": 787788013,
-            "conceptId": 50043002,
-            "type": {
-              "conceptId": "900000000000003001",
-              "defaultTerm": "Fully specified name (core metadata concept)",
-              "definitionStatus": "Primitive",
-              "active": true,
-              "effectiveTime": "20020131",
-              "module": "900000000000012004"
-            },
-            "term": "Disease of respiratory system (disorder)",
-            "length": 40,
-            "ics": {
-              "conceptId": "900000000000020002",
-              "defaultTerm": "Only initial character case insensitive (core metadata concept)",
-              "definitionStatus": "Primitive",
-              "active": true,
-              "effectiveTime": "20020131",
-              "module": "900000000000012004"
-            },
-            "active": false,
-            "effectiveTime": "20040731",
-            "module": "900000000000207008"
-          },
-          {
-            "descriptionId": 83355011,
-            "conceptId": 50043002,
-            "type": {
-              "conceptId": "900000000000013009",
-              "defaultTerm": "Synonym (core metadata concept)",
-              "definitionStatus": "Primitive",
-              "active": true,
-              "effectiveTime": "20020131",
-              "module": "900000000000012004"
-            },
-            "term": "Disease of respiratory system",
-            "length": 29,
-            "ics": {
-              "conceptId": "900000000000020002",
-              "defaultTerm": "Only initial character case insensitive (core metadata concept)",
-              "definitionStatus": "Primitive",
-              "active": true,
-              "effectiveTime": "20020131",
-              "module": "900000000000012004"
-            },
-            "active": false,
-            "effectiveTime": "20040731",
-            "module": "900000000000207008"
-          },
-          {
-            "descriptionId": 83356012,
-            "conceptId": 50043002,
-            "type": {
-              "conceptId": "900000000000013009",
-              "defaultTerm": "Synonym (core metadata concept)",
-              "definitionStatus": "Primitive",
-              "active": true,
-              "effectiveTime": "20020131",
-              "module": "900000000000012004"
-            },
-            "term": "Disease of respiratory system, NOS",
-            "length": 34,
-            "ics": {
-              "conceptId": "900000000000020002",
-              "defaultTerm": "Only initial character case insensitive (core metadata concept)",
-              "definitionStatus": "Primitive",
-              "active": true,
-              "effectiveTime": "20020131",
-              "module": "900000000000012004"
-            },
-            "active": false,
-            "effectiveTime": "20020131",
-            "module": "900000000000207008"
-          },
-          {
-            "descriptionId": 83357015,
-            "conceptId": 50043002,
-            "type": {
-              "conceptId": "900000000000013009",
-              "defaultTerm": "Synonym (core metadata concept)",
-              "definitionStatus": "Primitive",
-              "active": true,
-              "effectiveTime": "20020131",
-              "module": "900000000000012004"
-            },
-            "term": "Respiratory disorder, NOS",
-            "length": 25,
-            "ics": {
-              "conceptId": "900000000000020002",
-              "defaultTerm": "Only initial character case insensitive (core metadata concept)",
-              "definitionStatus": "Primitive",
-              "active": true,
-              "effectiveTime": "20020131",
-              "module": "900000000000012004"
-            },
-            "active": false,
-            "effectiveTime": "20020131",
-            "module": "900000000000207008"
-          },
-          {
-            "descriptionId": 83358013,
-            "conceptId": 50043002,
-            "type": {
-              "conceptId": "900000000000013009",
-              "defaultTerm": "Synonym (core metadata concept)",
-              "definitionStatus": "Primitive",
-              "active": true,
-              "effectiveTime": "20020131",
-              "module": "900000000000012004"
-            },
-            "term": "Respiratory disorder",
-            "length": 20,
-            "ics": {
-              "conceptId": "900000000000020002",
-              "defaultTerm": "Only initial character case insensitive (core metadata concept)",
-              "definitionStatus": "Primitive",
-              "active": true,
-              "effectiveTime": "20020131",
-              "module": "900000000000012004"
-            },
-            "langMemberships": [
-              {
-                "descriptionId": 83358013,
-                "refset": {
-                  "conceptId": "900000000000509007",
-                  "defaultTerm": "United States of America English language reference set (foundation metadata concept)",
-                  "definitionStatus": "Primitive",
-                  "active": true,
-                  "effectiveTime": "20020131",
-                  "module": "900000000000012004"
-                },
-                "acceptability": {
-                  "conceptId": "900000000000549004",
-                  "defaultTerm": "Acceptable (foundation metadata concept)",
-                  "definitionStatus": "Primitive",
-                  "active": true,
-                  "effectiveTime": "20020131",
-                  "module": "900000000000012004"
-                },
-                "uuid": "702d14dc-df5c-519b-96a3-40e27092e0f2",
-                "active": true,
-                "effectiveTime": "20020131",
-                "module": "900000000000207008"
-              },
-              {
-                "descriptionId": 83358013,
-                "refset": {
-                  "conceptId": "900000000000508004",
-                  "defaultTerm": "Great Britain English language reference set (foundation metadata concept)",
-                  "definitionStatus": "Primitive",
-                  "active": true,
-                  "effectiveTime": "20020131",
-                  "module": "900000000000012004"
-                },
-                "acceptability": {
-                  "conceptId": "900000000000549004",
-                  "defaultTerm": "Acceptable (foundation metadata concept)",
-                  "definitionStatus": "Primitive",
-                  "active": true,
-                  "effectiveTime": "20020131",
-                  "module": "900000000000012004"
-                },
-                "uuid": "b27ec132-697c-5d94-b727-37ec4058222f",
-                "active": true,
-                "effectiveTime": "20020131",
-                "module": "900000000000207008"
-              }
-            ],
-            "active": true,
-            "effectiveTime": "20020131",
-            "module": "900000000000207008"
-          }
-        ]
-        
 ## Description [/descriptions/{sctid}]
 A single Description object with all its details
 
@@ -1972,78 +1489,1530 @@ A single Description object with all its details
 
     + Body
 
-        [
-          {
-            "descriptionId": 198229013,
-            "conceptId": 50043002,
-            "type": {
-              "conceptId": "900000000000013009",
-              "defaultTerm": "Synonym (core metadata concept)",
-              "definitionStatus": "Primitive",
-              "active": true,
-              "effectiveTime": "20020131",
-              "module": "900000000000012004"
-            },
-            "term": "Respiratory disease",
-            "length": 19,
-            "ics": {
-              "conceptId": "900000000000020002",
-              "defaultTerm": "Only initial character case insensitive (core metadata concept)",
-              "definitionStatus": "Primitive",
-              "active": true,
-              "effectiveTime": "20020131",
-              "module": "900000000000012004"
-            },
-            "langMemberships": [
+            [
               {
                 "descriptionId": 198229013,
-                "refset": {
-                  "conceptId": "900000000000508004",
-                  "defaultTerm": "Great Britain English language reference set (foundation metadata concept)",
+                "conceptId": 50043002,
+                "type": {
+                  "conceptId": "900000000000013009",
+                  "defaultTerm": "Synonym (core metadata concept)",
                   "definitionStatus": "Primitive",
                   "active": true,
                   "effectiveTime": "20020131",
                   "module": "900000000000012004"
                 },
-                "acceptability": {
-                  "conceptId": "900000000000549004",
-                  "defaultTerm": "Acceptable (foundation metadata concept)",
+                "term": "Respiratory disease",
+                "length": 19,
+                "ics": {
+                  "conceptId": "900000000000020002",
+                  "defaultTerm": "Only initial character case insensitive (core metadata concept)",
                   "definitionStatus": "Primitive",
                   "active": true,
                   "effectiveTime": "20020131",
                   "module": "900000000000012004"
                 },
-                "uuid": "a1718b14-7bef-5e17-94fa-6b5e497f3094",
+                "langMemberships": [
+                  {
+                    "descriptionId": 198229013,
+                    "refset": {
+                      "conceptId": "900000000000508004",
+                      "defaultTerm": "Great Britain English language reference set (foundation metadata concept)",
+                      "definitionStatus": "Primitive",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000012004"
+                    },
+                    "acceptability": {
+                      "conceptId": "900000000000549004",
+                      "defaultTerm": "Acceptable (foundation metadata concept)",
+                      "definitionStatus": "Primitive",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000012004"
+                    },
+                    "uuid": "a1718b14-7bef-5e17-94fa-6b5e497f3094",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000207008"
+                  },
+                  {
+                    "descriptionId": 198229013,
+                    "refset": {
+                      "conceptId": "900000000000509007",
+                      "defaultTerm": "United States of America English language reference set (foundation metadata concept)",
+                      "definitionStatus": "Primitive",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000012004"
+                    },
+                    "acceptability": {
+                      "conceptId": "900000000000549004",
+                      "defaultTerm": "Acceptable (foundation metadata concept)",
+                      "definitionStatus": "Primitive",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000012004"
+                    },
+                    "uuid": "a29d2ebe-3598-54b0-9ae3-09aa6eb5216b",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000207008"
+                  }
+                ],
+                "active": true,
+                "effectiveTime": "20020131",
+                "module": "900000000000207008"
+              }
+            ]
+
+## Descriptions Collection [/concepts/{sctid}/descriptions]
+A collection of all descriptions of a concept.
+
++ Parameters
+    + sctid (required, number, `138875005`) ... SNOMED CT Identifier (`sctid`) of the Concept. Has example value.
+
+### Retrieve Descriptions of a Concept [GET]
++ Response 200 (application/json)
+
+    + Header
+
+            X-My-Header: Header
+
+    + Body
+
+            [
+              {
+                "descriptionId": 198229013,
+                "conceptId": 50043002,
+                "type": {
+                  "conceptId": "900000000000013009",
+                  "defaultTerm": "Synonym (core metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "term": "Respiratory disease",
+                "length": 19,
+                "ics": {
+                  "conceptId": "900000000000020002",
+                  "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "langMemberships": [
+                  {
+                    "descriptionId": 198229013,
+                    "refset": {
+                      "conceptId": "900000000000508004",
+                      "defaultTerm": "Great Britain English language reference set (foundation metadata concept)",
+                      "definitionStatus": "Primitive",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000012004"
+                    },
+                    "acceptability": {
+                      "conceptId": "900000000000549004",
+                      "defaultTerm": "Acceptable (foundation metadata concept)",
+                      "definitionStatus": "Primitive",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000012004"
+                    },
+                    "uuid": "a1718b14-7bef-5e17-94fa-6b5e497f3094",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000207008"
+                  },
+                  {
+                    "descriptionId": 198229013,
+                    "refset": {
+                      "conceptId": "900000000000509007",
+                      "defaultTerm": "United States of America English language reference set (foundation metadata concept)",
+                      "definitionStatus": "Primitive",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000012004"
+                    },
+                    "acceptability": {
+                      "conceptId": "900000000000549004",
+                      "defaultTerm": "Acceptable (foundation metadata concept)",
+                      "definitionStatus": "Primitive",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000012004"
+                    },
+                    "uuid": "a29d2ebe-3598-54b0-9ae3-09aa6eb5216b",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000207008"
+                  }
+                ],
                 "active": true,
                 "effectiveTime": "20020131",
                 "module": "900000000000207008"
               },
               {
-                "descriptionId": 198229013,
-                "refset": {
-                  "conceptId": "900000000000509007",
-                  "defaultTerm": "United States of America English language reference set (foundation metadata concept)",
+                "descriptionId": 2468834018,
+                "conceptId": 50043002,
+                "type": {
+                  "conceptId": "900000000000003001",
+                  "defaultTerm": "Fully specified name (core metadata concept)",
                   "definitionStatus": "Primitive",
                   "active": true,
                   "effectiveTime": "20020131",
                   "module": "900000000000012004"
                 },
-                "acceptability": {
-                  "conceptId": "900000000000549004",
-                  "defaultTerm": "Acceptable (foundation metadata concept)",
+                "term": "Disorder of respiratory system (disorder)",
+                "length": 41,
+                "ics": {
+                  "conceptId": "900000000000020002",
+                  "defaultTerm": "Only initial character case insensitive (core metadata concept)",
                   "definitionStatus": "Primitive",
                   "active": true,
                   "effectiveTime": "20020131",
                   "module": "900000000000012004"
                 },
-                "uuid": "a29d2ebe-3598-54b0-9ae3-09aa6eb5216b",
+                "langMemberships": [
+                  {
+                    "descriptionId": 2468834018,
+                    "refset": {
+                      "conceptId": "900000000000508004",
+                      "defaultTerm": "Great Britain English language reference set (foundation metadata concept)",
+                      "definitionStatus": "Primitive",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000012004"
+                    },
+                    "acceptability": {
+                      "conceptId": "900000000000548007",
+                      "defaultTerm": "Preferred (foundation metadata concept)",
+                      "definitionStatus": "Primitive",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000012004"
+                    },
+                    "uuid": "000372cb-9f92-54d8-81c1-be464f4f2d93",
+                    "active": true,
+                    "effectiveTime": "20040731",
+                    "module": "900000000000207008"
+                  },
+                  {
+                    "descriptionId": 2468834018,
+                    "refset": {
+                      "conceptId": "900000000000509007",
+                      "defaultTerm": "United States of America English language reference set (foundation metadata concept)",
+                      "definitionStatus": "Primitive",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000012004"
+                    },
+                    "acceptability": {
+                      "conceptId": "900000000000548007",
+                      "defaultTerm": "Preferred (foundation metadata concept)",
+                      "definitionStatus": "Primitive",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000012004"
+                    },
+                    "uuid": "c69468d5-bf1c-5eee-a446-a754f519b735",
+                    "active": true,
+                    "effectiveTime": "20040731",
+                    "module": "900000000000207008"
+                  }
+                ],
+                "active": true,
+                "effectiveTime": "20040731",
+                "module": "900000000000207008"
+              },
+              {
+                "descriptionId": 2474886015,
+                "conceptId": 50043002,
+                "type": {
+                  "conceptId": "900000000000013009",
+                  "defaultTerm": "Synonym (core metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "term": "Disorder of respiratory system",
+                "length": 30,
+                "ics": {
+                  "conceptId": "900000000000020002",
+                  "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "langMemberships": [
+                  {
+                    "descriptionId": 2474886015,
+                    "refset": {
+                      "conceptId": "900000000000509007",
+                      "defaultTerm": "United States of America English language reference set (foundation metadata concept)",
+                      "definitionStatus": "Primitive",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000012004"
+                    },
+                    "acceptability": {
+                      "conceptId": "900000000000548007",
+                      "defaultTerm": "Preferred (foundation metadata concept)",
+                      "definitionStatus": "Primitive",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000012004"
+                    },
+                    "uuid": "6b6b7701-140f-527d-8a46-71bb732cd3ec",
+                    "active": true,
+                    "effectiveTime": "20040731",
+                    "module": "900000000000207008"
+                  },
+                  {
+                    "descriptionId": 2474886015,
+                    "refset": {
+                      "conceptId": "900000000000508004",
+                      "defaultTerm": "Great Britain English language reference set (foundation metadata concept)",
+                      "definitionStatus": "Primitive",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000012004"
+                    },
+                    "acceptability": {
+                      "conceptId": "900000000000548007",
+                      "defaultTerm": "Preferred (foundation metadata concept)",
+                      "definitionStatus": "Primitive",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000012004"
+                    },
+                    "uuid": "ededc6da-4d9b-5a6d-82c4-9729a0a32dac",
+                    "active": true,
+                    "effectiveTime": "20040731",
+                    "module": "900000000000207008"
+                  }
+                ],
+                "active": true,
+                "effectiveTime": "20040731",
+                "module": "900000000000207008"
+              },
+              {
+                "descriptionId": 495571011,
+                "conceptId": 50043002,
+                "type": {
+                  "conceptId": "900000000000013009",
+                  "defaultTerm": "Synonym (core metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "term": "Respiratory system disease",
+                "length": 26,
+                "ics": {
+                  "conceptId": "900000000000020002",
+                  "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "langMemberships": [
+                  {
+                    "descriptionId": 495571011,
+                    "refset": {
+                      "conceptId": "900000000000508004",
+                      "defaultTerm": "Great Britain English language reference set (foundation metadata concept)",
+                      "definitionStatus": "Primitive",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000012004"
+                    },
+                    "acceptability": {
+                      "conceptId": "900000000000549004",
+                      "defaultTerm": "Acceptable (foundation metadata concept)",
+                      "definitionStatus": "Primitive",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000012004"
+                    },
+                    "uuid": "44f67edb-7adc-543f-9724-2f5d1fbcc4fa",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000207008"
+                  },
+                  {
+                    "descriptionId": 495571011,
+                    "refset": {
+                      "conceptId": "900000000000509007",
+                      "defaultTerm": "United States of America English language reference set (foundation metadata concept)",
+                      "definitionStatus": "Primitive",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000012004"
+                    },
+                    "acceptability": {
+                      "conceptId": "900000000000549004",
+                      "defaultTerm": "Acceptable (foundation metadata concept)",
+                      "definitionStatus": "Primitive",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000012004"
+                    },
+                    "uuid": "e8dcd507-9acc-5a59-873e-d0b1da156bda",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000207008"
+                  }
+                ],
+                "active": true,
+                "effectiveTime": "20020131",
+                "module": "900000000000207008"
+              },
+              {
+                "descriptionId": 787788013,
+                "conceptId": 50043002,
+                "type": {
+                  "conceptId": "900000000000003001",
+                  "defaultTerm": "Fully specified name (core metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "term": "Disease of respiratory system (disorder)",
+                "length": 40,
+                "ics": {
+                  "conceptId": "900000000000020002",
+                  "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "active": false,
+                "effectiveTime": "20040731",
+                "module": "900000000000207008"
+              },
+              {
+                "descriptionId": 83355011,
+                "conceptId": 50043002,
+                "type": {
+                  "conceptId": "900000000000013009",
+                  "defaultTerm": "Synonym (core metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "term": "Disease of respiratory system",
+                "length": 29,
+                "ics": {
+                  "conceptId": "900000000000020002",
+                  "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "active": false,
+                "effectiveTime": "20040731",
+                "module": "900000000000207008"
+              },
+              {
+                "descriptionId": 83356012,
+                "conceptId": 50043002,
+                "type": {
+                  "conceptId": "900000000000013009",
+                  "defaultTerm": "Synonym (core metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "term": "Disease of respiratory system, NOS",
+                "length": 34,
+                "ics": {
+                  "conceptId": "900000000000020002",
+                  "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "active": false,
+                "effectiveTime": "20020131",
+                "module": "900000000000207008"
+              },
+              {
+                "descriptionId": 83357015,
+                "conceptId": 50043002,
+                "type": {
+                  "conceptId": "900000000000013009",
+                  "defaultTerm": "Synonym (core metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "term": "Respiratory disorder, NOS",
+                "length": 25,
+                "ics": {
+                  "conceptId": "900000000000020002",
+                  "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "active": false,
+                "effectiveTime": "20020131",
+                "module": "900000000000207008"
+              },
+              {
+                "descriptionId": 83358013,
+                "conceptId": 50043002,
+                "type": {
+                  "conceptId": "900000000000013009",
+                  "defaultTerm": "Synonym (core metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "term": "Respiratory disorder",
+                "length": 20,
+                "ics": {
+                  "conceptId": "900000000000020002",
+                  "defaultTerm": "Only initial character case insensitive (core metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "langMemberships": [
+                  {
+                    "descriptionId": 83358013,
+                    "refset": {
+                      "conceptId": "900000000000509007",
+                      "defaultTerm": "United States of America English language reference set (foundation metadata concept)",
+                      "definitionStatus": "Primitive",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000012004"
+                    },
+                    "acceptability": {
+                      "conceptId": "900000000000549004",
+                      "defaultTerm": "Acceptable (foundation metadata concept)",
+                      "definitionStatus": "Primitive",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000012004"
+                    },
+                    "uuid": "702d14dc-df5c-519b-96a3-40e27092e0f2",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000207008"
+                  },
+                  {
+                    "descriptionId": 83358013,
+                    "refset": {
+                      "conceptId": "900000000000508004",
+                      "defaultTerm": "Great Britain English language reference set (foundation metadata concept)",
+                      "definitionStatus": "Primitive",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000012004"
+                    },
+                    "acceptability": {
+                      "conceptId": "900000000000549004",
+                      "defaultTerm": "Acceptable (foundation metadata concept)",
+                      "definitionStatus": "Primitive",
+                      "active": true,
+                      "effectiveTime": "20020131",
+                      "module": "900000000000012004"
+                    },
+                    "uuid": "b27ec132-697c-5d94-b727-37ec4058222f",
+                    "active": true,
+                    "effectiveTime": "20020131",
+                    "module": "900000000000207008"
+                  }
+                ],
                 "active": true,
                 "effectiveTime": "20020131",
                 "module": "900000000000207008"
               }
-            ],
-            "active": true,
-            "effectiveTime": "20020131",
-            "module": "900000000000207008"
-          }
-        ]
+            ]
+
+## Descriptions Search [/concepts/{sctid}/descriptions?query={searchTerm}&mode={mode}]
+A collection of all children of a concept, for the specified form (stated form or inferred form). Search returns a summary of each description in order to minimize transfer loads.
+
++ Parameters
+    + sctid (required, number, `138875005`) ... SNOMED CT Identifier (`sctid`) of the Concept. Has example value.
+    + searchTerm (required, String, `Asthma`) ... Search term to perform a descriptions search. Has example value.
+    + mode (optional, String, `startswith`) ... Search mode. Current implementation includes `startswith`, a case sensitive, start of string, match. More modes to come in future versions. Has example value.
+
+### Search Descriptions [GET]
++ Response 200 (application/json)
+
+    + Header
+
+            X-My-Header: Header
+
+    + Body
+
+            [
+              {
+                "term": "Asthmatic",
+                "conceptId": 195967001,
+                "active": true
+              },
+              {
+                "term": "Asthma",
+                "conceptId": 195967001,
+                "active": true
+              },
+              {
+                "term": "Asthma (disorder)",
+                "conceptId": 195967001,
+                "active": true
+              },
+              {
+                "term": "Asthma - cardiac",
+                "conceptId": 71892000,
+                "active": true
+              },
+              {
+                "term": "Asthma - currently active",
+                "conceptId": 312453004,
+                "active": true
+              },
+              {
+                "term": "Asthma - currently active (finding)",
+                "conceptId": 312453004,
+                "active": true
+              },
+              {
+                "term": "Asthma - currently dormant",
+                "conceptId": 312454005,
+                "active": true
+              },
+              {
+                "term": "Asthma - currently dormant (finding)",
+                "conceptId": 312454005,
+                "active": true
+              },
+              {
+                "term": "Asthma accident and emergency attendance since last visit (regime/therapy)",
+                "conceptId": 134380003,
+                "active": false
+              },
+              {
+                "term": "Asthma Accident and Emergency attendance since last visit (regime/therapy)",
+                "conceptId": 134380003,
+                "active": true
+              },
+              {
+                "term": "Asthma Accident and Emergency attendance since last visit",
+                "conceptId": 134380003,
+                "active": true
+              },
+              {
+                "term": "Asthma accident and emergency attendance since last visit",
+                "conceptId": 134380003,
+                "active": false
+              },
+              {
+                "term": "Asthma accident and emergency attendance since last visit (procedure)",
+                "conceptId": 134380003,
+                "active": false
+              },
+              {
+                "term": "Asthma annual review (regime/therapy)",
+                "conceptId": 394700004,
+                "active": true
+              },
+              {
+                "term": "Asthma annual review",
+                "conceptId": 394700004,
+                "active": true
+              },
+              {
+                "term": "Asthma attack",
+                "conceptId": 266364000,
+                "active": true
+              },
+              {
+                "term": "Asthma attack (disorder)",
+                "conceptId": 266364000,
+                "active": true
+              },
+              {
+                "term": "Asthma management (regime/therapy)",
+                "conceptId": 406162001,
+                "active": true
+              },
+              {
+                "term": "Asthma management",
+                "conceptId": 406162001,
+                "active": true
+              },
+              {
+                "term": "Asthma care",
+                "conceptId": 406162001,
+                "active": true
+              },
+              {
+                "term": "Asthma causes daytime symptoms 1 to 2 times per month (finding)",
+                "conceptId": 370202007,
+                "active": true
+              },
+              {
+                "term": "Asthma causes daytime symptoms 1 to 2 times per month",
+                "conceptId": 370202007,
+                "active": true
+              },
+              {
+                "term": "Asthma causes daytime symptoms 1 to 2 times per week (finding)",
+                "conceptId": 370203002,
+                "active": true
+              },
+              {
+                "term": "Asthma causes daytime symptoms 1 to 2 times per week",
+                "conceptId": 370203002,
+                "active": true
+              },
+              {
+                "term": "Asthma causes daytime symptoms most days (finding)",
+                "conceptId": 370204008,
+                "active": true
+              },
+              {
+                "term": "Asthma causes daytime symptoms most days",
+                "conceptId": 370204008,
+                "active": true
+              },
+              {
+                "term": "Asthma causes night symptoms 1 to 2 times per month (finding)",
+                "conceptId": 370205009,
+                "active": true
+              },
+              {
+                "term": "Asthma causes night symptoms 1 to 2 times per month",
+                "conceptId": 370205009,
+                "active": true
+              },
+              {
+                "term": "Asthma causing night waking",
+                "conceptId": 170632009,
+                "active": true
+              },
+              {
+                "term": "Asthma causing night waking (finding)",
+                "conceptId": 170632009,
+                "active": true
+              },
+              {
+                "term": "Asthma clinical management plan (qualifier value)",
+                "conceptId": 412775002,
+                "active": true
+              },
+              {
+                "term": "Asthma clinical management plan",
+                "conceptId": 412775002,
+                "active": true
+              },
+              {
+                "term": "Asthma confirmed (context-dependent category)",
+                "conceptId": 401193004,
+                "active": false
+              },
+              {
+                "term": "Asthma confirmed",
+                "conceptId": 401193004,
+                "active": true
+              },
+              {
+                "term": "Asthma confirmed (situation)",
+                "conceptId": 401193004,
+                "active": true
+              },
+              {
+                "term": "Asthma control questionnaire (assessment scale)",
+                "conceptId": 445531003,
+                "active": true
+              },
+              {
+                "term": "Asthma control questionnaire",
+                "conceptId": 445531003,
+                "active": true
+              },
+              {
+                "term": "Asthma control step 0",
+                "conceptId": 182726007,
+                "active": true
+              },
+              {
+                "term": "Asthma control step 0 (procedure)",
+                "conceptId": 182726007,
+                "active": true
+              },
+              {
+                "term": "Asthma control step 1",
+                "conceptId": 182727003,
+                "active": true
+              },
+              {
+                "term": "Asthma control step 1 (procedure)",
+                "conceptId": 182727003,
+                "active": true
+              },
+              {
+                "term": "Asthma control step 2",
+                "conceptId": 182728008,
+                "active": true
+              },
+              {
+                "term": "Asthma control step 2 (procedure)",
+                "conceptId": 182728008,
+                "active": true
+              },
+              {
+                "term": "Asthma control step 3",
+                "conceptId": 182729000,
+                "active": true
+              },
+              {
+                "term": "Asthma control step 3 (procedure)",
+                "conceptId": 182729000,
+                "active": true
+              },
+              {
+                "term": "Asthma control step 4",
+                "conceptId": 182730005,
+                "active": true
+              },
+              {
+                "term": "Asthma control step 4 (procedure)",
+                "conceptId": 182730005,
+                "active": true
+              },
+              {
+                "term": "Asthma control step 5",
+                "conceptId": 182731009,
+                "active": true
+              },
+              {
+                "term": "Asthma control step 5 (procedure)",
+                "conceptId": 182731009,
+                "active": true
+              },
+              {
+                "term": "Asthma control steps",
+                "conceptId": 302220000,
+                "active": true
+              },
+              {
+                "term": "Asthma control steps (procedure)",
+                "conceptId": 302220000,
+                "active": true
+              },
+              {
+                "term": "Asthma control test (assessment scale)",
+                "conceptId": 443450003,
+                "active": true
+              },
+              {
+                "term": "Asthma control test",
+                "conceptId": 443450003,
+                "active": true
+              },
+              {
+                "term": "Asthma control test score (observable entity)",
+                "conceptId": 443117005,
+                "active": true
+              },
+              {
+                "term": "Asthma control test score",
+                "conceptId": 443117005,
+                "active": true
+              },
+              {
+                "term": "Asthma daytime symptoms (finding)",
+                "conceptId": 373899003,
+                "active": true
+              },
+              {
+                "term": "Asthma daytime symptoms",
+                "conceptId": 373899003,
+                "active": true
+              },
+              {
+                "term": "Asthma disturbing sleep",
+                "conceptId": 170631002,
+                "active": true
+              },
+              {
+                "term": "Asthma disturbing sleep (finding)",
+                "conceptId": 170631002,
+                "active": true
+              },
+              {
+                "term": "Asthma disturbs sleep frequently",
+                "conceptId": 170634005,
+                "active": true
+              },
+              {
+                "term": "Asthma disturbs sleep frequently (finding)",
+                "conceptId": 170634005,
+                "active": true
+              },
+              {
+                "term": "Asthma disturbs sleep weekly",
+                "conceptId": 170633004,
+                "active": true
+              },
+              {
+                "term": "Asthma disturbs sleep weekly (finding)",
+                "conceptId": 170633004,
+                "active": true
+              },
+              {
+                "term": "Asthma due to internal immunological process",
+                "conceptId": 266361008,
+                "active": true
+              },
+              {
+                "term": "Asthma education (procedure)",
+                "conceptId": 401135008,
+                "active": true
+              },
+              {
+                "term": "Asthma education",
+                "conceptId": 401135008,
+                "active": true
+              },
+              {
+                "term": "Asthma finding (finding)",
+                "conceptId": 390798007,
+                "active": true
+              },
+              {
+                "term": "Asthma finding",
+                "conceptId": 390798007,
+                "active": true
+              },
+              {
+                "term": "Asthma follow-up (regime/therapy)",
+                "conceptId": 394701000,
+                "active": true
+              },
+              {
+                "term": "Asthma follow-up",
+                "conceptId": 394701000,
+                "active": true
+              },
+              {
+                "term": "Asthma leaflet given (situation)",
+                "conceptId": 183099005,
+                "active": true
+              },
+              {
+                "term": "Asthma leaflet given",
+                "conceptId": 183099005,
+                "active": true
+              },
+              {
+                "term": "Asthma leaflet given (procedure)",
+                "conceptId": 183099005,
+                "active": false
+              },
+              {
+                "term": "Asthma limiting activities",
+                "conceptId": 170637003,
+                "active": true
+              },
+              {
+                "term": "Asthma limiting activities (finding)",
+                "conceptId": 170637003,
+                "active": true
+              },
+              {
+                "term": "Asthma limits walking on the flat (finding)",
+                "conceptId": 370206005,
+                "active": true
+              },
+              {
+                "term": "Asthma limits walking on the flat",
+                "conceptId": 370206005,
+                "active": true
+              },
+              {
+                "term": "Asthma limits walking up hills or stairs (finding)",
+                "conceptId": 370207001,
+                "active": true
+              },
+              {
+                "term": "Asthma limits walking up hills or stairs",
+                "conceptId": 370207001,
+                "active": true
+              },
+              {
+                "term": "Asthma management plan given (regime/therapy)",
+                "conceptId": 170641004,
+                "active": true
+              },
+              {
+                "term": "Asthma management plan given",
+                "conceptId": 170641004,
+                "active": true
+              },
+              {
+                "term": "Asthma management plan given (procedure)",
+                "conceptId": 170641004,
+                "active": false
+              },
+              {
+                "term": "Asthma medication review (procedure)",
+                "conceptId": 394720003,
+                "active": true
+              },
+              {
+                "term": "Asthma medication review",
+                "conceptId": 394720003,
+                "active": true
+              },
+              {
+                "term": "Asthma monitor offer default",
+                "conceptId": 185730004,
+                "active": true
+              },
+              {
+                "term": "Asthma monitor offer default (finding)",
+                "conceptId": 185730004,
+                "active": true
+              },
+              {
+                "term": "Asthma monitored",
+                "conceptId": 270442000,
+                "active": true
+              },
+              {
+                "term": "Asthma monitoring check done",
+                "conceptId": 270442000,
+                "active": true
+              },
+              {
+                "term": "Asthma monitoring check done (finding)",
+                "conceptId": 270442000,
+                "active": true
+              },
+              {
+                "term": "Asthma monitoring (regime/therapy)",
+                "conceptId": 275908000,
+                "active": true
+              },
+              {
+                "term": "Asthma monitoring",
+                "conceptId": 275908000,
+                "active": true
+              },
+              {
+                "term": "Asthma monitoring (procedure)",
+                "conceptId": 275908000,
+                "active": false
+              },
+              {
+                "term": "Asthma monitoring by doctor (regime/therapy)",
+                "conceptId": 401183006,
+                "active": true
+              },
+              {
+                "term": "Asthma monitoring by doctor",
+                "conceptId": 401183006,
+                "active": true
+              },
+              {
+                "term": "Asthma monitoring by nurse (regime/therapy)",
+                "conceptId": 401182001,
+                "active": true
+              },
+              {
+                "term": "Asthma monitoring by nurse",
+                "conceptId": 401182001,
+                "active": true
+              },
+              {
+                "term": "Asthma monitoring call",
+                "conceptId": 308500005,
+                "active": true
+              },
+              {
+                "term": "Asthma monitoring call (procedure)",
+                "conceptId": 308500005,
+                "active": true
+              },
+              {
+                "term": "Asthma monitoring call first letter",
+                "conceptId": 185731000,
+                "active": true
+              },
+              {
+                "term": "Asthma monitoring call first letter (procedure)",
+                "conceptId": 185731000,
+                "active": true
+              },
+              {
+                "term": "Asthma monitoring call second letter",
+                "conceptId": 185732007,
+                "active": true
+              },
+              {
+                "term": "Asthma monitoring call second letter (procedure)",
+                "conceptId": 185732007,
+                "active": true
+              },
+              {
+                "term": "Asthma monitoring call telephone invite",
+                "conceptId": 185736005,
+                "active": true
+              },
+              {
+                "term": "Asthma monitoring call telephone invite (procedure)",
+                "conceptId": 185736005,
+                "active": true
+              },
+              {
+                "term": "Asthma monitoring call third letter",
+                "conceptId": 185734008,
+                "active": true
+              },
+              {
+                "term": "Asthma monitoring call third letter (procedure)",
+                "conceptId": 185734008,
+                "active": true
+              },
+              {
+                "term": "Asthma monitoring call verbal invite",
+                "conceptId": 185735009,
+                "active": true
+              },
+              {
+                "term": "Asthma monitoring call verbal invite (procedure)",
+                "conceptId": 185735009,
+                "active": true
+              },
+              {
+                "term": "Asthma monitoring deleted",
+                "conceptId": 185737001,
+                "active": true
+              },
+              {
+                "term": "Asthma monitoring deleted (finding)",
+                "conceptId": 185737001,
+                "active": true
+              },
+              {
+                "term": "Asthma monitoring due (finding)",
+                "conceptId": 390940007,
+                "active": true
+              },
+              {
+                "term": "Asthma monitoring due",
+                "conceptId": 390940007,
+                "active": true
+              },
+              {
+                "term": "Asthma monitoring status",
+                "conceptId": 308501009,
+                "active": true
+              },
+              {
+                "term": "Asthma monitoring status (finding)",
+                "conceptId": 308501009,
+                "active": true
+              },
+              {
+                "term": "Asthma never causes daytime symptoms (finding)",
+                "conceptId": 370208006,
+                "active": true
+              },
+              {
+                "term": "Asthma never causes daytime symptoms",
+                "conceptId": 370208006,
+                "active": true
+              },
+              {
+                "term": "Asthma never causes night symptoms (situation)",
+                "conceptId": 473391009,
+                "active": true
+              },
+              {
+                "term": "Asthma never causes night symptoms",
+                "conceptId": 473391009,
+                "active": true
+              },
+              {
+                "term": "Asthma never disturbs sleep",
+                "conceptId": 170636007,
+                "active": true
+              },
+              {
+                "term": "Asthma never disturbs sleep (finding)",
+                "conceptId": 170636007,
+                "active": true
+              },
+              {
+                "term": "Asthma never restricts exercise",
+                "conceptId": 170658009,
+                "active": true
+              },
+              {
+                "term": "Asthma never restricts exercise (finding)",
+                "conceptId": 170658009,
+                "active": true
+              },
+              {
+                "term": "Asthma night-time symptoms (finding)",
+                "conceptId": 395022009,
+                "active": true
+              },
+              {
+                "term": "Asthma night-time symptoms",
+                "conceptId": 395022009,
+                "active": true
+              },
+              {
+                "term": "Asthma not disturbing sleep",
+                "conceptId": 170635006,
+                "active": true
+              },
+              {
+                "term": "Asthma not disturbing sleep (finding)",
+                "conceptId": 170635006,
+                "active": true
+              },
+              {
+                "term": "Asthma not limiting activities",
+                "conceptId": 170638008,
+                "active": true
+              },
+              {
+                "term": "Asthma not limiting activities (finding)",
+                "conceptId": 170638008,
+                "active": true
+              },
+              {
+                "term": "Asthma nurse specialist (occupation)",
+                "conceptId": 445313000,
+                "active": true
+              },
+              {
+                "term": "Asthma nurse specialist",
+                "conceptId": 445313000,
+                "active": true
+              },
+              {
+                "term": "Asthma prophylactic medication used (regime/therapy)",
+                "conceptId": 170647000,
+                "active": false
+              },
+              {
+                "term": "Asthma prophylactic medication used",
+                "conceptId": 170647000,
+                "active": true
+              },
+              {
+                "term": "Asthma prophylactic medication used (situation)",
+                "conceptId": 170647000,
+                "active": true
+              },
+              {
+                "term": "Asthma prophylactic medication used (procedure)",
+                "conceptId": 170647000,
+                "active": false
+              },
+              {
+                "term": "Asthma resolved",
+                "conceptId": 162660004,
+                "active": true
+              },
+              {
+                "term": "Asthma resolved (finding)",
+                "conceptId": 162660004,
+                "active": true
+              },
+              {
+                "term": "Asthma restricts exercise",
+                "conceptId": 170655007,
+                "active": true
+              },
+              {
+                "term": "Asthma restricts exercise (finding)",
+                "conceptId": 170655007,
+                "active": true
+              },
+              {
+                "term": "Asthma screening",
+                "conceptId": 171231001,
+                "active": true
+              },
+              {
+                "term": "Asthma screening (procedure)",
+                "conceptId": 171231001,
+                "active": true
+              },
+              {
+                "term": "Asthma self management",
+                "conceptId": 699728000,
+                "active": true
+              },
+              {
+                "term": "Asthma self management (regime/therapy)",
+                "conceptId": 699728000,
+                "active": true
+              },
+              {
+                "term": "Asthma self-management behavior (observable entity)",
+                "conceptId": 405010009,
+                "active": true
+              },
+              {
+                "term": "Asthma self-management behaviour",
+                "conceptId": 405010009,
+                "active": true
+              },
+              {
+                "term": "Asthma self-management behavior",
+                "conceptId": 405010009,
+                "active": true
+              },
+              {
+                "term": "Asthma self-management",
+                "conceptId": 405010009,
+                "active": true
+              },
+              {
+                "term": "Asthma severely restricts exercise",
+                "conceptId": 170657004,
+                "active": true
+              },
+              {
+                "term": "Asthma severely restricts exercise (finding)",
+                "conceptId": 170657004,
+                "active": true
+              },
+              {
+                "term": "Asthma severity (regime/therapy)",
+                "conceptId": 170642006,
+                "active": true
+              },
+              {
+                "term": "Asthma severity",
+                "conceptId": 170642006,
+                "active": true
+              },
+              {
+                "term": "Asthma severity (procedure)",
+                "conceptId": 170642006,
+                "active": false
+              },
+              {
+                "term": "Asthma society member",
+                "conceptId": 161105008,
+                "active": true
+              },
+              {
+                "term": "Asthma society member (finding)",
+                "conceptId": 161105008,
+                "active": true
+              },
+              {
+                "term": "Asthma sometimes restricts exercise",
+                "conceptId": 170656008,
+                "active": true
+              },
+              {
+                "term": "Asthma sometimes restricts exercise (finding)",
+                "conceptId": 170656008,
+                "active": true
+              },
+              {
+                "term": "Asthma treatment compliance satisfactory (finding)",
+                "conceptId": 370226009,
+                "active": true
+              },
+              {
+                "term": "Asthma treatment compliance satisfactory",
+                "conceptId": 370226009,
+                "active": true
+              },
+              {
+                "term": "Asthma treatment compliance unsatisfactory (finding)",
+                "conceptId": 370225008,
+                "active": true
+              },
+              {
+                "term": "Asthma treatment compliance unsatisfactory",
+                "conceptId": 370225008,
+                "active": true
+              },
+              {
+                "term": "Asthma trigger (observable entity)",
+                "conceptId": 400987003,
+                "active": true
+              },
+              {
+                "term": "Asthma trigger",
+                "conceptId": 400987003,
+                "active": true
+              },
+              {
+                "term": "Asthma trigger finding (finding)",
+                "conceptId": 397579009,
+                "active": true
+              },
+              {
+                "term": "Asthma trigger finding",
+                "conceptId": 397579009,
+                "active": true
+              },
+              {
+                "term": "Asthma with irreversible airway obstruction",
+                "conceptId": 401000119107,
+                "active": true
+              },
+              {
+                "term": "Asthma with irreversible airway obstruction (disorder)",
+                "conceptId": 401000119107,
+                "active": true
+              },
+              {
+                "term": "Asthma with status asthmaticus (disorder)",
+                "conceptId": 57546000,
+                "active": true
+              },
+              {
+                "term": "Asthma with status asthmaticus",
+                "conceptId": 57546000,
+                "active": true
+              },
+              {
+                "term": "Asthma without status asthmaticus (disorder)",
+                "conceptId": 55570000,
+                "active": true
+              },
+              {
+                "term": "Asthma without status asthmaticus",
+                "conceptId": 55570000,
+                "active": true
+              },
+              {
+                "term": "Asthmatic breath sounds",
+                "conceptId": 56018004,
+                "active": true
+              },
+              {
+                "term": "Asthmatic breathing",
+                "conceptId": 56018004,
+                "active": true
+              },
+              {
+                "term": "Asthmatic bronchitis (disorder)",
+                "conceptId": 405944004,
+                "active": true
+              },
+              {
+                "term": "Asthmatic bronchitis",
+                "conceptId": 405944004,
+                "active": true
+              },
+              {
+                "term": "Asthmatic pulmonary alveolitis",
+                "conceptId": 41997000,
+                "active": true
+              },
+              {
+                "term": "Asthmatic pulmonary alveolitis (disorder)",
+                "conceptId": 41997000,
+                "active": true
+              },
+              {
+                "term": "Asthmatic pulmonary eosinophilia",
+                "conceptId": 233691007,
+                "active": true
+              },
+              {
+                "term": "Asthmatic pulmonary eosinophilia (disorder)",
+                "conceptId": 233691007,
+                "active": true
+              },
+              {
+                "term": "Asthmatoid wheeze",
+                "conceptId": 18197001,
+                "active": true
+              },
+              {
+                "term": "Asthmatoid wheeze (finding)",
+                "conceptId": 18197001,
+                "active": true
+              }
+            ]
+
+# Group Relationships
+Relationships of SNOMED CT Concepts.
+
+## Relationships Collection [/concepts/{sctid}/relationships?form={form}]
+A collection of all relationships of a concept, for the specified form (stated form or inferred form).
+
++ Parameters
+    + sctid (required, number, `138875005`) ... SNOMED CT Identifier (`sctid`) of the Parent Concept. Has example value.
+    + form (optional, string, `stated`) ... Form used to select the relationships, the form matches the characteristic type of the selected relationships. The default value is "inferred". Possible values are "stated" or "inferred" Has example value.
+
+### Get Relationships [GET]
++ Response 200 (application/json)
+
+    + Header
+
+            X-My-Header: Header
+
+    + Body
+
+            [
+              {
+                "type": {
+                  "conceptId": 116680003,
+                  "defaultTerm": "Is a (attribute)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20110131",
+                  "module": "900000000000012004"
+                },
+                "target": {
+                  "conceptId": 50043002,
+                  "defaultTerm": "Disorder of respiratory system (disorder)",
+                  "definitionStatus": "Fully defined",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000207008"
+                },
+                "sourceId": 195967001,
+                "groupId": 0,
+                "charType": {
+                  "conceptId": "900000000000010007",
+                  "defaultTerm": "Stated relationship (core metadata concept)",
+                  "definitionStatus": "Primitive",
+                  "active": true,
+                  "effectiveTime": "20020131",
+                  "module": "900000000000012004"
+                },
+                "modifier": "Existential restriction",
+                "active": true,
+                "effectiveTime": "20080731",
+                "module": "900000000000207008"
+              }
+            ]
