@@ -1335,11 +1335,9 @@ A single Concept object with all its details. The concept object is a de-normali
               "module": "900000000000207008"
             }
 
-# Group Children
-Children or Subtypes are concepts that are directly linked with an is-a relationship to the parent concept.
-
 ## Children Collection [/concepts/{sctid}/children?form={form}]
-A collection of all children of a concept, for the specified form (stated form or inferred form). Search returns a summary of each child concept in order to minimize transfer loads.
+Children or Subtypes are concepts that are directly linked with an is-a relationship to the parent concept.
+A collection of all concepts that are children of the provided parent concept, for the specified form (stated form or inferred form). Search returns a summary of each child concept in order to minimize transfer loads.
 
 + Parameters
     + sctid (required, number, `138875005`) ... SNOMED CT Identifier (`sctid`) of the Parent Concept. Has example value.
@@ -1480,7 +1478,7 @@ A single Description object with all its details
 + Parameters
     + sctid (required, number, `198229013`) ... SNOMED CT Identifier (`sctid`) of the Description. Has example value.
 
-### Retrieve a Concept [GET]
+### Retrieve a Description [GET]
 + Response 200 (application/json)
 
     + Header
@@ -1571,7 +1569,7 @@ A collection of all descriptions of a concept.
 + Parameters
     + sctid (required, number, `138875005`) ... SNOMED CT Identifier (`sctid`) of the Concept. Has example value.
 
-### Retrieve Descriptions of a Concept [GET]
+### Retrieve all Descriptions of a Concept [GET]
 + Response 200 (application/json)
 
     + Header
@@ -2971,7 +2969,7 @@ A collection of all relationships of a concept, for the specified form (stated f
 
 + Parameters
     + sctid (required, number, `138875005`) ... SNOMED CT Identifier (`sctid`) of the Parent Concept. Has example value.
-    + form (optional, string, `stated`) ... Form used to select the relationships, the form matches the characteristic type of the selected relationships. The default value is "inferred". Possible values are "stated" or "inferred" Has example value.
+    + form (optional, string, `stated`) ... Form used to select the relationships, the form matches the characteristic type of the selected relationships. The default value is "inferred". Possible values are "stated" or "inferred". Has example value.
 
 ### Get Relationships [GET]
 + Response 200 (application/json)
