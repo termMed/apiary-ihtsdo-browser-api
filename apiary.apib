@@ -1469,6 +1469,30 @@ A collection of all concepts that are children of the provided parent concept, f
               }
             ]
 
+## Parents Collection [/concepts/{sctid}/parents?form={form}]
+Children or Subtypes are concepts that are directly linked with an is-a relationship to the parent concept.
+A collection of all concepts that are children of the provided parent concept, for the specified form (stated form or inferred form). Search returns a summary of each child concept in order to minimize transfer loads.
+
++ Parameters
+    + sctid (required, number, `195967001`) ... SNOMED CT Identifier (`sctid`) of the Parent Concept. Has example value.
+    + form (optional, string, `inferred`) ... Form used to select the children, the form matches the characteristic type of the is-a relationships selected for creating the collection. The default value is "inferred". Possible values are "stated" or "inferred" Has example value.
+
+### Retrieve Parents [GET]
++ Response 200 (application/json)
+
+    + Header
+
+            X-My-Header: Header
+
+    + Body
+    
+            [
+              {
+                "conceptId": 50043002,
+                "defaultTerm": "Disorder of respiratory system (disorder)"
+              }
+            ]
+
 # Group Descriptions
 Descriptions of SNOMED CT Concepts.
 
